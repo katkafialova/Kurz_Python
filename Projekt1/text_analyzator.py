@@ -36,7 +36,7 @@ password = input('Password: ')
 print(oddelovac)
 
 if registr.get(username) == password:
-    print('Welcome to the app, ' + username + '\nWe have 3 texts to be analyzed.')
+    print('Welcome to the app, ', username, '\nWe have 3 texts to be analyzed.')
     print(oddelovac)
 else:
     print('You are not a registered user.')
@@ -57,7 +57,7 @@ pocet_slov = len(odstavec)
 pocet_tittlecase, pocet_uppercase, pocet_lowercase, pocet_numeric, suma_numeric = 0, 0, 0, 0, 0
 
 for slovo in odstavec:
-    slovo = slovo.strip(".,")
+    slovo = slovo.strip(".,:?!;")
     if slovo.istitle():
         pocet_tittlecase += 1
     elif slovo.isupper():
@@ -77,8 +77,36 @@ print('There are', pocet_numeric, 'numeric strings.')
 print('The sum of all the numbers is:', suma_numeric)
 print(oddelovac)
 
+graf = {}
+for slovo in odstavec:
+    if len(slovo) not in graf:
+        graf[len(slovo)] = 1
+    else:
+        graf[len(slovo)] += 1
+
 print('LEN | OCCURENCES       | NR.')
 print(oddelovac)
+
+#graf = {}
+#for slovo in odstavec:
+  #  if len(slovo) not in
+  #  graf[len(slovo)] = graf.get(len(slovo), 0) + 1
+
+#graf = sorted(graf.items())
+
+print("LEN | OCCURENCES | Nr.")
+f = "{:5}|{:20}|{:5}"
+#for a in graf:
+    #print(neco[0], "|", "*" * int(neco[1]), "|", neco[1])
+ #   print(f.format(a[0], int(a[1]) * '*', a[1]))
+
+for index in range(1, len(graf) + 1):
+    pocet = graf.get(index)
+    if pocet:
+        print('{:>3} | {:<17}  {:<12}'.format(index, pocet * '*', pocet))
+
+
+
 
 
 
