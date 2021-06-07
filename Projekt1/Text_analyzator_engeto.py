@@ -50,13 +50,14 @@ if not number.isnumeric():
     exit()
 elif not int(number) in range(1, 4):
     print('We have only 3 texts')
+odstavec = int(number) - 1
 
-odstavec = TEXTS[int(number) - 1].split()
+#odstavec = TEXTS[int(number) - 1].split()
 
 pocet_slov = len(odstavec)
 pocet_tittlecase, pocet_uppercase, pocet_lowercase, pocet_numeric, suma_numeric = 0, 0, 0, 0, 0
 
-for slovo in odstavec:
+for slovo in TEXTS:
     slovo = slovo.strip(".,")
     if slovo.istitle():
         pocet_tittlecase += 1
@@ -68,7 +69,6 @@ for slovo in odstavec:
         pocet_numeric += 1
         suma_numeric += int(slovo)
 
-
 print('There are', pocet_slov, 'words in the selected text.')
 print('There are', pocet_tittlecase, 'titlecase words.')
 print('There are', pocet_uppercase, 'uppercase words.')
@@ -79,7 +79,3 @@ print(oddelovac)
 
 print('LEN | OCCURENCES       | NR.')
 print(oddelovac)
-
-
-
-
