@@ -1,3 +1,3 @@
-# python-kurz
-Testování
+# Python kurz
+Projekty z kurzu Engeto - python akademie
 
