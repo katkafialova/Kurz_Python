@@ -1,3 +1,6 @@
+'''
+author = Kateřina Fialová
+'''
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer, 
 Fossil Butte is a ruggedly impressive 
@@ -30,7 +33,7 @@ garpike and stingray are also present.'''
 
 oddelovac = "-" * 40
 
-registr = {'bob' : '13', 'ann' : 'pass123', 'mike' : 'password123', 'lize' : 'pass123'}
+registr = {'bob' : '123', 'ann' : 'pass123', 'mike' : 'password123', 'lize' : 'pass123'}
 username = input('Username: ')
 password = input('Password: ')
 print(oddelovac)
@@ -56,17 +59,17 @@ odstavec = TEXTS[int(number) - 1].split()
 pocet_slov = len(odstavec)
 pocet_tittlecase, pocet_uppercase, pocet_lowercase, pocet_numeric, suma_numeric = 0, 0, 0, 0, 0
 
-for slovo in odstavec:
-    slovo = slovo.strip(".,:?!;")
-    if slovo.istitle():
+for slovo in range(len(odstavec)):
+    odstavec[slovo] = odstavec[slovo].strip(".,:?!;")
+    if odstavec[slovo].istitle():
         pocet_tittlecase += 1
-    elif slovo.isupper():
+    elif odstavec[slovo].isupper():
         pocet_uppercase += 1
-    elif slovo.islower():
+    elif odstavec[slovo].islower():
         pocet_lowercase += 1
-    elif slovo.isnumeric():
+    elif odstavec[slovo].isnumeric():
         pocet_numeric += 1
-        suma_numeric += int(slovo)
+        suma_numeric += int(odstavec[slovo])
 
 
 print('There are', pocet_slov, 'words in the selected text.')
@@ -77,6 +80,10 @@ print('There are', pocet_numeric, 'numeric strings.')
 print('The sum of all the numbers is:', suma_numeric)
 print(oddelovac)
 
+f = '{:5}|{:20}|{:3}'
+print(f.format('LEN', 'OCCURRENCES', 'NR.'))
+print(oddelovac)
+
 graf = {}
 for slovo in odstavec:
     if len(slovo) not in graf:
@@ -84,30 +91,6 @@ for slovo in odstavec:
     else:
         graf[len(slovo)] += 1
 
-print('LEN | OCCURENCES       | NR.')
-print(oddelovac)
-
-#graf = {}
-#for slovo in odstavec:
-  #  if len(slovo) not in
-  #  graf[len(slovo)] = graf.get(len(slovo), 0) + 1
-
-#graf = sorted(graf.items())
-
-print("LEN | OCCURENCES | Nr.")
-f = "{:5}|{:20}|{:5}"
-#for a in graf:
-    #print(neco[0], "|", "*" * int(neco[1]), "|", neco[1])
- #   print(f.format(a[0], int(a[1]) * '*', a[1]))
-
-for index in range(1, len(graf) + 1):
-    pocet = graf.get(index)
-    if pocet:
-        print('{:>3} | {:<17}  {:<12}'.format(index, pocet * '*', pocet))
-
-
-
-
-
-
-
+graf = sorted(graf.items())
+for a, b in graf:
+    print(f.format(a, b * '*', b))
