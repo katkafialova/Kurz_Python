@@ -53,8 +53,10 @@ if not number.isnumeric():
     exit()
 elif not int(number) in range(1, 4):
     print('We have only 3 texts')
+    exit()
 
 odstavec = TEXTS[int(number) - 1].split()
+#odstavec = [slovo.strip(",. ") for slovo in TEXTS[int(number) - 1].split()]
 
 pocet_slov = len(odstavec)
 pocet_tittlecase, pocet_uppercase, pocet_lowercase, pocet_numeric, suma_numeric = 0, 0, 0, 0, 0
