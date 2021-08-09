@@ -23,7 +23,7 @@ which are about 300 feet thick.''',
 '''The monument contains 8198 acres and protects 
 a portion of the largest deposit of freshwater fish 
 fossils in the world. The richest fossil fish deposits 
-are found in multiple limestone layers, which lie some 
+are found in multiple . limestone layers, which lie some 
 100 feet below the top of the butte. The fossils 
 represent several varieties of perch, as well as 
 other freshwater genera and herring similar to those 
@@ -55,10 +55,13 @@ elif not int(number) in range(1, 4):
     print('We have only 3 texts')
     exit()
 
-odstavec = TEXTS[int(number) - 1].split()
-#odstavec = [slovo.strip(",. ") for slovo in TEXTS[int(number) - 1].split()]
+odstavec = TEXTS[int(number) - 1]
+odstavec = odstavec.replace(",", "")
+odstavec = odstavec.replace(".", "")
+odstavec=odstavec.split()
 
 pocet_slov = len(odstavec)
+
 pocet_tittlecase, pocet_uppercase, pocet_lowercase, pocet_numeric, suma_numeric = 0, 0, 0, 0, 0
 
 for slovo in range(len(odstavec)):
