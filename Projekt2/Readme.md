@@ -1,2 +1,2 @@
 # Projekt - Bulls & Cows
-Textový analyzátor - hádání tajného čtyřciferného čísla.
+Bulls & Cows - hádání tajného čtyřciferného čísla.
