@@ -14,4 +14,24 @@ Výsledný soubor `Elections Scraper app.py` budete spouštět pomocí 2 argumen
 * Druhý argument obsahuje jméno výstupního souboru
 
 # Ukázka
+```
+--------------------------------------------------------------------------------
+==============================Election scraper app==============================
+--------------------------------------------------------------------------------
+
+    1)Otevři následující odkaz: https://volby.cz/pls/ps2017nss/ps3?xjazyk=CZ
+    2)Vyber si územní celek kliknutím na "X"
+    
+--------------------------------------------------------------------------------
+Vlož odkaz zvoleného územního celku: https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101
+--------------------------------------------------------------------------------
+Nyní napiš název souboru pro uložení dat: Benesov
+--------------------------------------------------------------------------------
+Probíhá exportování
+================================================================================
+
+    Hotovo! Data jsou uložena v souboru
+    
+================================================================================
+```
 
