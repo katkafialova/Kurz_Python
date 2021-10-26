@@ -13,7 +13,7 @@ pip install `-r requirements.txt`
 Spuštění souboru ```election scraper.py``` v rámci příkazového řádku požaduje 2 povinné argumenty.
 
 ```
-Election scraper app.py<odkaz-uzemniho-celku> <vysledny-soubor>
+Election scraper app uprava.py<odkaz-uzemniho-celku> <vysledny-soubor>
 ```
 
 Následně se vám stáhnou výsledky jako soubor s příponou ```.csv```.
