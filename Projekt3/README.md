@@ -20,7 +20,7 @@ Následně se vám stáhnou výsledky jako soubor s příponou ```.csv```.
 
 # Ukázka
 ```
-Election scraper app.py "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101" "Benesov.csv"
+Election scraper app uprava.py "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101" "Benesov.csv"
 ```
 ```
 --------------------------------------------------------------------------------
