@@ -9,29 +9,24 @@ Pro instalaci použijte příkaz:
 pip install `-r requirements.txt`
 
 # Spuštění projektu
-Výsledný soubor `Elections Scraper app.py` budete spouštět pomocí 2 argumentů:
-* První argument obsahuje odkaz, který územní celek chcete scrapovat
-* Druhý argument obsahuje jméno výstupního souboru
+---
+Spuštění souboru ```election scraper.py``` v rámci příkazového řádku požaduje 2 povinné argumenty.
+
+```python
+python election_scraper <odkaz-uzemniho-celku> <vysledny-soubor>
+```
+
+Následně se vám stáhnou výsledky jako soubor s příponou ```.csv```.
 
 # Ukázka
 ```
 --------------------------------------------------------------------------------
 ==============================Election scraper app==============================
 --------------------------------------------------------------------------------
-
-    1)Otevři následující odkaz: https://volby.cz/pls/ps2017nss/ps3?xjazyk=CZ
-    2)Vyber si územní celek kliknutím na "X"
-    
+Stahuji data z url:  https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101
+Stahuji data do souboru:  Benesov.csv
 --------------------------------------------------------------------------------
-Vlož odkaz zvoleného územního celku: https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101
---------------------------------------------------------------------------------
-Nyní napiš název souboru pro uložení dat: Benesov
---------------------------------------------------------------------------------
-Probíhá exportování
-================================================================================
-
-    Hotovo! Data jsou uložena v souboru
-    
+Hotovo! Data jsou uložena v souboru Benesov.csv
 ================================================================================
 ```
 
